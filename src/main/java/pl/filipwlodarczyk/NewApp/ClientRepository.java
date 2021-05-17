@@ -12,10 +12,14 @@ public class ClientRepository {
     Client createClient(String name, String nickname,int debit){
         Client newClient = new Client(name, nickname, debit);
         this.clientList.add(newClient);
+        System.out.println("Utworzono klienta, imie: " + newClient.getName());
         return newClient;
     }
 
-    public List<Client> getClientList() {
-        return this.clientList;
+
+    public void getClientList() {
+        for(Client client : clientList) {
+            System.out.println(client.getName() + " " + client.getNickname() + " " + client.getDebit());
+        }
     }
 }

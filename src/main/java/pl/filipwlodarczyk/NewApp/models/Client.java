@@ -10,4 +10,16 @@ public class Client {
         this.nickname = nickname;
         this.debit = debit;
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getNickname() {
+        return nickname;
+    }
+
+    public int getDebit() {
+        return debit;
+    }
 }
