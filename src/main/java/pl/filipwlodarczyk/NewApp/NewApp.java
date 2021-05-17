@@ -1,11 +1,10 @@
 package pl.filipwlodarczyk.NewApp;
 
+import pl.filipwlodarczyk.NewApp.ui.text.TextMainView;
+
 public class NewApp {
     public static void main(String[] args) {
-        System.out.println("System do zarządzania debetami");
-        System.out.println("Wciśnij 1 żeby wyświetlić liste klientów");
-        System.out.println("Wciśnij 2 żeby dodać nowego klienta");
-        System.out.println("Wcisnij 3 zeby usunąć klienta");
-
+        TextMainView mainScreen = new TextMainView();
+        mainScreen.init();
     }
 }
