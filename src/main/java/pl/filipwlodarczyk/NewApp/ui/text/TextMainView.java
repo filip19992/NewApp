@@ -15,7 +15,7 @@ public class TextMainView {
         System.out.println("Wcisnij 4 żeby wyjść");
 
         Scanner sc = new Scanner(System.in);
-        
+
         boolean isMenuRunning = true;
 
         while (isMenuRunning) {
