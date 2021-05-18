@@ -1,4 +1,4 @@
-package pl.filipwlodarczyk.NewApp.models;
+package pl.filipwlodarczyk.NewApp.clients.domain;
 
 public class Client {
     private String name;

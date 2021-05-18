@@ -1,14 +1,21 @@
 package pl.filipwlodarczyk.NewApp.ui.text;
 
-import pl.filipwlodarczyk.NewApp.ClientService;
+import pl.filipwlodarczyk.NewApp.clients.domain.ClientService;
 
+import java.io.IOException;
 import java.util.Scanner;
 
 public class TextMainView {
 
-    private final ClientService clientService = new ClientService();
+    private ClientService clientService;
 
-    public void init() {
+    public TextMainView(ClientService clientService) {
+        this.clientService = clientService;
+    }
+
+
+    public void init() throws IOException {
+        this.clientService.realAll();
 
         Scanner sc = new Scanner(System.in);
 
@@ -42,6 +49,7 @@ public class TextMainView {
                 }
 
                 case 4 -> {
+                    this.clientService.saveAll();
                     isMenuRunning = false;
                 }
             }
